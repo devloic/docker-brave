@@ -1,0 +1,32 @@
+services:
+  docker-brave:
+    image: devloic/docker-brave
+    #privileged: true
+    #user: 1002:1002
+    #read_only: true
+    cap_add:
+     - NET_ADMIN
+     - SYS_ADMIN
+     - SYS_PTRACE
+     - SYS_CHROOT
+    security_opt:
+     - seccomp:unconfined
+     - apparmor:unconfined
+     #- "seccomp=$PWD/seccomp-enable-clone-pivot_root.json"
+    #security_opt:
+     #- "no-new-privileges=true"
+     #- "apparmor=unconfined"
+     #- "seccomp=unconfined"
+     #- "seccomp=./seccomp-enable-clone-pivot_root.json"
+    #cap_drop:
+     #- ALL
+    #cap_add:
+      #- SYS_ADMIN
+    ports:
+      - "5800:5800"
+      - "5900:5900"
+    volumes:
+      - "./brave:/tmp2"
+      #- "/dev/snd:/dev/snd"
+    environment:
+      - WEB_AUDIO=1
