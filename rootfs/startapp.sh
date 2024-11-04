@@ -27,5 +27,7 @@ set -e
 #/usr/bin/brave --version
 #exec /usr/bin/brave "$@" >> /config/log/firefox/output.log 2>> /config/log/firefox/error.log
 export $(dbus-launch)
-flatpak run com.brave.Browser
+flatpak run --filesystem=/config/sharedwithhost:create com.brave.Browser
+#flatpak run --filesystem=/config/sharedwithhost:create --socket=pulseaudio com.brave.Browser
+
 # vim:ft=sh:ts=4:sw=4:et:sts=4

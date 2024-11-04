@@ -1,22 +1,24 @@
-# Docker container for Firefox
-[![Release](https://img.shields.io/github/release/jlesage/docker-firefox.svg?logo=github&style=for-the-badge)](https://github.com/jlesage/docker-firefox/releases/latest)
-[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/firefox/latest?logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/firefox/tags)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jlesage/firefox?label=Pulls&logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/firefox)
-[![Docker Stars](https://img.shields.io/docker/stars/jlesage/firefox?label=Stars&logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/firefox)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/jlesage/docker-firefox/build-image.yml?logo=github&branch=master&style=for-the-badge)](https://github.com/jlesage/docker-firefox/actions/workflows/build-image.yml)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge)](https://paypal.me/JocelynLeSage)
+# Docker container for Brave
+[![Release](https://img.shields.io/github/release/devloic/podman-brave.svg?logo=github&style=for-the-badge)](https://github.com/devloic/podman-brave/releases/latest)
+[![Docker Image Size](https://img.shields.io/docker/image-size/devloic/podman-brave/latest?logo=docker&style=for-the-badge)](https://hub.docker.com/r/devloic/podman-brave/tags)
+[![Docker Pulls](https://img.shields.io/docker/pulls/devloic/podman-brave?label=Pulls&logo=docker&style=for-the-badge)](https://hub.docker.com/r/devloic/podman-brave)
+[![Docker Stars](https://img.shields.io/docker/stars/devloic/podman-brave?label=Stars&logo=docker&style=for-the-badge)](https://hub.docker.com/r/devloic/podman-brave)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/devloic/podman-brave/build-image.yml?logo=github&branch=master&style=for-the-badge)](https://github.com/devloic/podman-brave/actions/workflows/build-image.yml)
 
-This project implements a Docker container for [Firefox](https://www.mozilla.org/firefox/).
+
+This project implements a Docker container for [Brave](https://brave.com/).
 
 The GUI of the application is accessed through a modern web browser (no
-installation or configuration needed on the client side) or via any VNC client.
+installation or configuration needed on the client side (noVNC) ) or via any VNC client.
+
+**based on [https://github.com/jlesage/docker-firefox/](https://github.com/jlesage/docker-firefox/)**
 
 ---
 
-[![Firefox logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/firefox-icon.png&w=110)](https://www.mozilla.org/firefox/)[![Firefox](https://images.placeholders.dev/?width=224&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=Firefox&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.mozilla.org/firefox/)
+[![Brave logo](https://images.weserv.nl/?url=raw.githubusercontent.com/devloic/podman-brave/refs/heads/main/brave_logo.png&w=330)](https://www.brave.com/)
 
-Mozilla Firefox is a free and open-source web browser developed by Mozilla
-Foundation and its subsidiary, Mozilla Corporation.
+Brave is a free and open-source web browser developed by Brave
+under Mozilla Public License Version 2.0.
 
 ---
 

@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.20-v4
+FROM  docker.io/jlesage/baseimage-gui:alpine-3.20-v4
 
 # Docker image version is provided via build arg.
 ARG DOCKER_IMAGE_VERSION=
@@ -56,6 +56,5 @@ LABEL \
       org.label-schema.vcs-url="https://github.com/devloic/docker-brave" \
       org.label-schema.schema-version="1.0"
 COPY rootfs/ /
-COPY rootfs/ /
-COPY rootfs/ /
-COPY rootfs/ /
+RUN true
+RUN chmod u-s /usr/bin/bwrap
