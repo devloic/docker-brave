@@ -20,4 +20,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: black1512/demo1:latest
+          tags: devloic/podman-brave:latest
