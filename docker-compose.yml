@@ -1,12 +1,11 @@
 services:
   docker-brave:
-    image: ghcr.io/devloic/podman-brave:main
+    image: localhost/devloic/docker-brave
     privileged: true
     ports:
       - "5800:5800"
       - "5900:5900"
     volumes:
       - "./sharedwithhost:/config/sharedwithhost"
-      - "/dev/snd:/dev/snd"
     environment:
       - WEB_AUDIO=1
