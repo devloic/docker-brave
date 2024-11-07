@@ -1,6 +1,6 @@
 # Docker container for Brave
 
-This is a Docker container for [Brave](https://www.brave.com/).
+This is a Docker container for [Brave](https://www.brave.com/) based on alpine and docker-baseimage-gui https://github.com/jlesage/docker-baseimage-gui
 
 The GUI of the application is accessed through a modern web browser (no
 installation or configuration needed on the client side (noVNC) ) or via any VNC client.
