@@ -23,7 +23,6 @@ jobs:
           tags: docker.io/devloic/docker-brave:latest
       
       - name: Dockerhub description
-        if: ${{ steps.prep.outputs.release_type == 'standard' }}
         uses: peter-evans/dockerhub-description@v4
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
