@@ -1,7 +1,7 @@
 #
 # brave Dockerfile
 #
-# https://github.com/devloic/podman-brave
+# https://github.com/devloic/docker-brave
 #
 
 # Pull base image.
@@ -15,8 +15,7 @@ WORKDIR /tmp
 
 COPY rootfs/ /
 
-RUN \
-    #--network=host \
+RUN --network=host \
     add-pkg --no-cache flatpak dbus-x11 xdg-dbus-proxy && \
     flatpak remote-add  --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install -y flathub com.brave.Browser && \
@@ -30,7 +29,7 @@ RUN \
 # Metadata.
 LABEL \
       org.label-schema.name="brave" \
-      org.label-schema.description="Docker container for Brave" \
+      org.label-schema.description="Container for Brave" \
       org.label-schema.version="${DOCKER_IMAGE_VERSION:-unknown}" \
       org.label-schema.vcs-url="https://github.com/devloic/docker-brave" \
       org.label-schema.schema-version="1.0"
