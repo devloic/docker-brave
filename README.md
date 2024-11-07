@@ -51,14 +51,19 @@ podman-compose up -d
 
 
 Build image with docker:
+```shell
 docker buildx build --network host --progress plain --allow network.host --load . -t docker.io/devloic/docker-brave:latest 
+
 or
+
 docker  build --network host . -t docker.io/devloic/docker-brave
+```
 
 --network host => necessary because flatpak might have dns problems getting its resources during build time 
 
 Build image with podman:
+```shell
 podman  build --network host . -t docker.io/devloic/docker-brave
-
+```
 
 For more options check https://github.com/jlesage/docker-baseimage-gui
