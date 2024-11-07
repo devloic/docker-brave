@@ -1,6 +1,6 @@
 services:
   docker-brave:
-    image: localhost/devloic/docker-brave
+    image: docker.io/devloic/docker-brave
     privileged: true
     ports:
       - "5800:5800"
