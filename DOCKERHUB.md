@@ -1,56 +1,40 @@
-# Docker container for Firefox
-[![Release](https://img.shields.io/github/release/jlesage/docker-firefox.svg?logo=github&style=for-the-badge)](https://github.com/jlesage/docker-firefox/releases/latest)
-[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/firefox/latest?logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/firefox/tags)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jlesage/firefox?label=Pulls&logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/firefox)
-[![Docker Stars](https://img.shields.io/docker/stars/jlesage/firefox?label=Stars&logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/firefox)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/jlesage/docker-firefox/build-image.yml?logo=github&branch=master&style=for-the-badge)](https://github.com/jlesage/docker-firefox/actions/workflows/build-image.yml)
-[![Source](https://img.shields.io/badge/Source-GitHub-blue?logo=github&style=for-the-badge)](https://github.com/jlesage/docker-firefox)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge)](https://paypal.me/JocelynLeSage)
+# Docker container for Brave
 
-This is a Docker container for [Firefox](https://www.mozilla.org/firefox/).
+This is a Docker container for [Brave](https://www.brave.com/).
 
 The GUI of the application is accessed through a modern web browser (no
-installation or configuration needed on the client side) or via any VNC client.
+installation or configuration needed on the client side (noVNC) ) or via any VNC client.
 
 ---
 
-[![Firefox logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/firefox-icon.png&w=110)](https://www.mozilla.org/firefox/)[![Firefox](https://images.placeholders.dev/?width=224&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=Firefox&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.mozilla.org/firefox/)
+[![Brave logo](https://images.weserv.nl/?url=raw.githubusercontent.com/devloic/docker-brave/refs/heads/main/brave_logo.png&w=110)](https://www.brave.com)[![Brave]
 
-Mozilla Firefox is a free and open-source web browser developed by Mozilla
-Foundation and its subsidiary, Mozilla Corporation.
+Brave is a free and open-source web browser developed by Brave under  [MPL-2.0 license](https://github.com/brave/brave-browser#MPL-2.0-1-ov-file)
 
 ---
 
 ## Quick Start
 
-**NOTE**:
-    The Docker command provided in this quick start is given as an example
-    and parameters should be adjusted to your need.
-
-Launch the Firefox docker container with the following command:
+Launch the brave docker container with the following command:
 ```shell
-docker run -d \
-    --name=firefox \
-    -p 5800:5800 \
-    -v /docker/appdata/firefox:/config:rw \
-    jlesage/firefox
-```
+docker run --privileged -p 5800:5800 -p 5900:5900 -v ./sharedwithhost:/config/sharedwithhost -e WEB_AUDIO=1 docker.io/devloic/docker-brave
 
 Where:
 
-  - `/docker/appdata/firefox`: This is where the application stores its configuration, states, log and any files needing persistency.
+  - `./sharedwithhost`: This is where you can save files with brave and share it with the host.
 
-Browse to `http://your-host-ip:5800` to access the Firefox GUI.
+Browse to `http://your-host-ip:5800` to access the Brave GUI.
+VNL your-host-ip:5900
 
-## Documentation
+The image is based on alpine. For now Brave is available as a flatpak on alpine. Flatpak needs privileged access to run inside a container.
+If this a problem for you, use podman. In privileged mode with podman, the container cannot have more privileges than the account that launched it.
+https://docs.podman.io/en/latest/markdown/podman-exec.1.html#privileged
 
-Full documentation is available at https://github.com/jlesage/docker-firefox.
 
-## Support or Contact
+```
+```shell
+podman run --privileged -p 5800:5800 -p 5900:5900 -v ./sharedwithhost:/config/sharedwithhost -e WEB_AUDIO=1 docker.io/devloic/docker-brave
+```
 
-Having troubles with the container or have questions?  Please
-[create a new issue].
+For docker compose / podman-compose check documentation on https://github.com/devloic/docker-brave
 
-For other great Dockerized applications, see https://jlesage.github.io/docker-apps.
-
-[create a new issue]: https://github.com/jlesage/docker-firefox/issues
