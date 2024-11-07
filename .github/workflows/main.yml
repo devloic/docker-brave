@@ -18,7 +18,7 @@ jobs:
       - name: build and push docker image to registry
         uses: docker/build-push-action@v5
         with:
-          context: DockerFileFolder/
+          context: ./
           push: true
           tags: docker.io/devloic/docker-brave:latest
       
