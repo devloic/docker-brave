@@ -24,7 +24,7 @@ Where:
   - `./sharedwithhost`: This is where you can save files with brave and share it with the host.
 
 Browse to `http://your-host-ip:5800` to access the Brave GUI.
-VNL your-host-ip:5900
+VNC: your-host-ip:5900
 
 The image is based on alpine. For now Brave is available as a flatpak on alpine. Flatpak needs privileged access to run inside a container.
 If this a problem for you, use podman. In privileged mode with podman, the container cannot have more privileges than the account that launched it.
