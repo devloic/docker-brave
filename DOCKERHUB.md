@@ -7,7 +7,7 @@ installation or configuration needed on the client side (noVNC) ) or via any VNC
 
 ---
 
-[![Brave logo](https://images.weserv.nl/?url=raw.githubusercontent.com/devloic/docker-brave/refs/heads/main/brave_logo.png&w=110)](https://www.brave.com)[![Brave]
+[![Brave logo](https://images.weserv.nl/?url=raw.githubusercontent.com/devloic/docker-brave/refs/heads/main/brave_logo.png&w=110)](https://www.brave.com)
 
 Brave is a free and open-source web browser developed by Brave under  [MPL-2.0 license](https://github.com/brave/brave-browser#MPL-2.0-1-ov-file)
 
