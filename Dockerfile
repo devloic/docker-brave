@@ -15,8 +15,7 @@ WORKDIR /tmp
 
 COPY rootfs/ /
 
-RUN #--network=host \
-    add-pkg --no-cache flatpak dbus-x11 xdg-dbus-proxy && \
+RUN add-pkg --no-cache flatpak dbus-x11 xdg-dbus-proxy && \
     flatpak remote-add  --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install -y flathub com.brave.Browser && \
     set-cont-env APP_NAME "Brave" && \
