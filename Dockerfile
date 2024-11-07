@@ -24,13 +24,13 @@ RUN \
     set-cont-env APP_VERSION "$(flatpak list | grep brave | awk '{print $3}')" && \
     set-cont-env DOCKER_IMAGE_VERSION "$DOCKER_IMAGE_VERSION" && \
     # Generate and install favicons.
-    APP_ICON_URL=https://raw.githubusercontent.com/devloic/podman-brave/refs/heads/main/brave_logo.png && \
+    APP_ICON_URL=https://raw.githubusercontent.com/devloic/docker-brave/refs/heads/main/brave_logo.png && \
     install_app_icon.sh "$APP_ICON_URL"
 
 # Metadata.
 LABEL \
       org.label-schema.name="brave" \
-      org.label-schema.description="Podman container for Brave" \
+      org.label-schema.description="Docker container for Brave" \
       org.label-schema.version="${DOCKER_IMAGE_VERSION:-unknown}" \
-      org.label-schema.vcs-url="https://github.com/devloic/podman-brave" \
+      org.label-schema.vcs-url="https://github.com/devloic/docker-brave" \
       org.label-schema.schema-version="1.0"
